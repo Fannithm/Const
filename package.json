@@ -1,0 +1,9 @@
+{
+  "name": "@fannithm/const",
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  }
+}

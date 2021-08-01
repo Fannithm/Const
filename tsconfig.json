@@ -1,0 +1,11 @@
+{
+	"include": [
+		"src/*.ts"
+	],
+	"compilerOptions": {
+		"declaration": true,
+		"outDir": "js",
+		"module": "Commonjs",
+		"target": "ES6"
+	}
+}
