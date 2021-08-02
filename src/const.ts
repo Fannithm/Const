@@ -43,3 +43,5 @@ export const MapTypeInfo = {
 		version: 1
 	}
 };
+
+export type UUID = string;
