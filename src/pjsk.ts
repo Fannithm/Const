@@ -29,7 +29,7 @@ export interface IMap {
 	timelines: IMapTimeline[],
 	bpms: IMapBPM[],
 	notes: (INoteTap | INoteFlick)[],
-	slide: INoteSlide[]
+	slides: INoteSlide[]
 };
 
 export interface IMapTimeline {
@@ -42,7 +42,8 @@ export type MapBeat = [number, number, number];
 export interface IMapBPM {
 	id: UUID,
 	timeline: UUID,
-	name: string
+	beat: MapBeat,
+	bpm: number
 };
 
 interface INote {
@@ -72,8 +73,7 @@ export interface INoteSlide {
 }
 
 export type INoteSlideNote = INoteSlideStart | INoteSlideInvisible |
-	INoteSlideVisible | INoteSlideVisibleWithoutPosition |
-	INoteSlideEndDefault | INoteSlideEndFlick;
+	INoteSlideVisible | INoteSlideEndDefault | INoteSlideEndFlick;
 
 export interface ISlideNote {
 	id: UUID,
@@ -82,8 +82,11 @@ export interface ISlideNote {
 	lane: number,
 	width: number,
 	curve: CurveType,
-	bezier?: [number, number, number, number]
+	bezier?: CubicBezier
 }
+
+export type CubicBezier = [number, number, number, number];
+
 export interface INoteSlideStart extends ISlideNote {
 	type: NoteType.SlideStart
 }
@@ -92,14 +95,14 @@ export interface INoteSlideInvisible extends ISlideNote {
 	type: NoteType.SlideInvisible
 }
 
-export interface INoteSlideVisible extends ISlideNote {
-	type: NoteType.SlideVisible
-}
-
-export interface INoteSlideVisibleWithoutPosition {
+export interface INoteSlideVisible {
 	id: UUID,
-	type: NoteType.SlideVisible
-	beat: MapBeat
+	type: NoteType.SlideVisible,
+	beat: MapBeat,
+	lane?: number,
+	width?: number,
+	curve?: CurveType,
+	bezier?: CubicBezier
 }
 
 export interface INoteSlideEndDefault extends ISlideNote {
