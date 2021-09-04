@@ -1,6 +1,6 @@
 # @fannithm/const
 
-[![Workflow Status](https://img.shields.io/github/workflow/status/fannithm/const/github-package)](https://github.com/fannithm/utils/actions/workflows/publish.yml) [![GitHub version](https://img.shields.io/github/package-json/v/fannithm/const)](https://github.com/fannithm/utils/packages/)
+[![Workflow Status](https://img.shields.io/github/workflow/status/fannithm/const/github-package)](https://github.com/fannithm/const/actions/workflows/publish.yml) [![GitHub version](https://img.shields.io/github/package-json/v/fannithm/const)](https://github.com/fannithm/const/packages/922815)
 
 Constants used by Project Fannithm.
 
