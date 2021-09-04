@@ -1,2 +1,7 @@
-node_modules/
 .github/
+node_modules/
+src/
+.editorconfig
+.gitignore
+.npmignore
+tsconfig.json
