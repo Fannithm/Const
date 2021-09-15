@@ -48,7 +48,7 @@ export interface IMapBPM {
 
 interface INote {
 	id: UUID,
-	timelines: UUID,
+	timeline: UUID,
 	type: NoteType,
 	beat: MapBeat,
 	lane: number,
@@ -67,7 +67,7 @@ export interface INoteFlick extends INote {
 
 export interface INoteSlide {
 	id: UUID,
-	timelines: UUID,
+	timeline: UUID,
 	critical: boolean,
 	notes: INoteSlideNote[]
 }

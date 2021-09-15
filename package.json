@@ -4,7 +4,7 @@
   "main": "dist/index.js",
   "license": "AGPL-3.0",
   "scripts": {
-	  "build": "tsc"
+    "build": "tsc"
   },
   "publishConfig": {
     "registry":"https://npm.pkg.github.com"
