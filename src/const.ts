@@ -1,10 +1,10 @@
-export const enum MapType {
+export enum MapType {
 	PJSK = 0,
 	BANG = 1,
 	// PGRS = 2
 }
 
-export const enum ResourceType {
+export enum ResourceType {
 	Other = 0,
 	Meta = 1,
 	Map = 2,
